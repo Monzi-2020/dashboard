@@ -3,14 +3,16 @@
     src: local("roboto"),
     url(./Roboto/Roboto-Regular.ttf) format('opentype'),
     url(./Roboto/Roboto-Bold.ttf) format('opentype'),
-    url(./Roboto/Roboto-Thin.ttf) format('opentype');
+    url(./Roboto/Roboto-Thin.ttf) format('opentype'),
+    url(./Roboto/Roboto-Medium.ttf) format('opentype');
 }
 
 :root{
     --main-font: "roboto", sans-serif;
     --color-blue: #0ea5e9;
-    --color-orange: #facc15;
+    --color-orange: #fbbf24;
     --color-grey: #e2e8f0;
+    --box-shadow: 3px 4px 5px #b5b2b2ce;
 }
 
 body{
@@ -109,6 +111,7 @@ svg{
 }
 
 .search{
+    border:none;
     width: 90%;
     height: 30px;
     background-color: var(--color-grey);
@@ -158,7 +161,7 @@ nav{
     grid-auto-flow: column;
     align-content: center;
     justify-content: end;
-    gap:50px;
+    gap:40px;
 }
 
 button {
@@ -178,7 +181,9 @@ article{
     display:grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 30px;
     background-color: var(--color-grey);
+    box-shadow: inset var(--box-shadow);
 }
 
 /* project */
@@ -188,11 +193,44 @@ article{
 
 .project_container{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap:20px;
 }
 
-.project_element > div{
+.project_element{
+    background-color: white;
+    margin:10px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 40fr;
+    box-shadow: var(--box-shadow);
+
+}
+
+.project_element > .orange{
+    background-color: var(--color-orange);
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.content{
+    padding: 30px 20px;
+    display:grid;
+}
+
+.icon_container{
+    justify-self: end;
+    display:grid;
+    grid-auto-flow: column;
+    gap:30px;
+    margin-top: 50px;
+    
+}
+
+.content > div{
     font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 img.star{
@@ -209,6 +247,11 @@ img.eye{
 img.share{
     content: url(./icons/share-variant-outline.svg);
     width: 30px;
+}
+
+.project > .name{
+    font-weight: 500;
+    margin-bottom:10px;
 }
 
 /* Announce */
