@@ -1,0 +1,43 @@
+body{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+/* Dashboard */
+
+.dashboard{
+    background-color: #06b6d4;
+    display: grid;
+    gap:20px;
+}
+
+.profile ul{
+    display:grid;
+    gap:10px;
+}
+
+/* Header */
+
+.header{
+    display:grid;
+    grid-auto-flow: column;
+}
+
+/* Nav */
+
+nav{
+    display:grid;
+    grid-auto-flow: column;
+}
+
+/* Article */
+
+article{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.project{
+    grid-row: 1/3;
+}
