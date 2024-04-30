@@ -20,6 +20,7 @@ body{
 
 .dashboard{
     background-color: #06b6d4;
+    color:white;
     display: grid;
     gap:20px;
 }
@@ -29,9 +30,10 @@ body{
     gap:10px;
 }
 
-img.dash_icon{
-    width:40px;
-    height:auto;
+svg{
+    width: 40px;
+    height: auto;
+    fill:white;
 }
 
 /* Header */
