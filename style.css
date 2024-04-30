@@ -1,6 +1,9 @@
 @font-face {
-    font-family: "roboto", sans-serif;
-    src: url(./Roboto/Roboto-Regular.ttf);
+    font-family: "roboto";
+    src: local("roboto"),
+    url(./Roboto/Roboto-Regular.ttf) format('opentype'),
+    url(./Roboto/Roboto-Bold.ttf) format('opentype'),
+    url(./Roboto/Roboto-Thin.ttf) format('opentype');
 }
 
 :root{
@@ -18,14 +21,14 @@ body{
 }
 
 .account_img{
-    width:40px;
+    width:5vh;
     border-radius: 50%;
 }
 
 .name{
     font-family: var(--main-font);
-    font-weight: 900;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
 /* Dashboard */
@@ -52,7 +55,7 @@ body{
 
 .logo > span{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 
@@ -128,6 +131,45 @@ img.header_icon.magnify{
 nav{
     display:grid;
     grid-auto-flow: column;
+    padding:20px 50px;
+}
+
+.hi_there{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.hi_there > .account_img{
+    width: 7vh;
+}
+
+.name.big{
+    font-size: 1.8rem;
+}
+
+.name.mid{
+    font-size:1rem;
+    font-weight: 600;
+}
+
+.button_container{
+    display:grid;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: end;
+    gap:50px;
+}
+
+button {
+    background-color: var(--color-blue);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 40px;
+    width: 110px;
 }
 
 /* Article */
