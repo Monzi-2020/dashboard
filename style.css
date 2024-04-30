@@ -1,6 +1,19 @@
+@font-face {
+    font-family: "roboto", sans-serif;
+    src: url(./Roboto/Roboto-Regular.ttf);
+}
+
+:root{
+    --main-font: "roboto", sans-serif;
+    --color-blue: #06b5d4;
+    --color-orange: #facc15;
+    --color-grey: #e2e8f0;
+}
+
 body{
     display:grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
+    font-family: var(--main-font);
 }
 
 /* Dashboard */
@@ -16,12 +29,24 @@ body{
     gap:10px;
 }
 
+img.dash_icon{
+    width:40px;
+    height:auto;
+}
+
 /* Header */
 
 .header{
     display:grid;
     grid-auto-flow: column;
 }
+
+/* img{
+    background: var(--color-orange);
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+} */
 
 /* Nav */
 
@@ -36,8 +61,29 @@ article{
     display:grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: var(--color-grey);
 }
 
+/* project */
 .project{
     grid-row: 1/3;
+}
+
+.project_container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+}
+
+.project_element > div{
+    font-weight: 700;
+}
+
+/* Announce */
+.announce_container, .trend_container{
+    display:grid;
+    grid-auto-flow: column;
+}
+
+.trend_container .account{
+    display:grid;
 }
