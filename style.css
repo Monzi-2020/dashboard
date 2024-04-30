@@ -5,7 +5,7 @@
 
 :root{
     --main-font: "roboto", sans-serif;
-    --color-blue: #06b5d4;
+    --color-blue: #0ea5e9;
     --color-orange: #facc15;
     --color-grey: #e2e8f0;
 }
@@ -14,24 +14,56 @@ body{
     display:grid;
     grid-template-columns: 1fr 4fr;
     font-family: var(--main-font);
+    margin:0;
 }
 
 /* Dashboard */
 
 .dashboard{
-    background-color: #06b6d4;
+    background-color: var(--color-blue);
     color:white;
     display: grid;
     gap:20px;
+    align-content: start;
+    padding:15px;
+    
 }
+
+.logo{
+    display:flex;
+    align-items: center;
+    
+}
+
+.logo > svg{
+    width: 60px;
+}
+
+.logo > span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
 
 .profile ul{
     display:grid;
     gap:10px;
+    list-style-type: none;
+    padding-left: 10px;
 }
 
+li{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+svg + span{
+    padding:15px;
+}
+
+
 svg{
-    width: 40px;
+    width: 20px;
     height: auto;
     fill:white;
 }
