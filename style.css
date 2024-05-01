@@ -186,7 +186,6 @@ button {
 article{
     display:grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
     padding: 30px;
     background-color: var(--color-grey);
     box-shadow: inset var(--box-shadow);
@@ -256,7 +255,6 @@ img.share{
 }
 
 .project > .name{
-    font-weight: 500;
     margin-bottom:10px;
 }
 
@@ -276,7 +274,7 @@ img.share{
 }
 
 .announc_element{
-    padding: 20px 10px;
+    padding: 20px;
 }
 
 .announc_element > div {
@@ -295,6 +293,24 @@ img.share{
 
 /* Trending */
 
-.trend_container .account{
+.trending{
+    margin-top: 20px;
+}
+
+.trend_container{
+    padding:30px;
+    justify-items: start;
+    gap:20px;
+}
+
+.trend_container > .account{
     display:grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap:20px;
+}
+
+.account > img{
+    width:5vh;
+    border-radius: 50%;
 }
