@@ -125,14 +125,14 @@ svg{
 }
 
 img.header_icon{
-    width: 25px;
+    width: 30px;
     justify-self: end;
     align-self: center;
     
 }
 
 img.header_icon.magnify{
-    padding-right:20px;
+    padding-right:30px;
 }
 
 /* Nav */
