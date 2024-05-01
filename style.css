@@ -13,6 +13,7 @@
     --color-orange: #fbbf24;
     --color-grey: #e2e8f0;
     --box-shadow: 3px 4px 5px #b5b2b2ce;
+    --bod-radius: 15px;
 }
 
 body{
@@ -31,6 +32,11 @@ body{
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 1.4rem;
+    margin-left:20px;
+}
+
+div + span{
+    color: gray;
 }
 
 /* Dashboard */
@@ -200,7 +206,7 @@ article{
 .project_element{
     background-color: white;
     margin:10px;
-    border-radius: 15px;
+    border-radius: var(--bod-radius);
     display: grid;
     grid-template-columns: 1fr 40fr;
     box-shadow: var(--box-shadow);
@@ -255,10 +261,39 @@ img.share{
 }
 
 /* Announce */
+
+.announcements{
+    display: grid;
+    align-content: start ;
+}
 .announce_container, .trend_container{
     display:grid;
-    grid-auto-flow: column;
+    background-color: white;
+    border-radius: var(--bod-radius);
+    box-shadow: var(--box-shadow);
+    padding:20px;
+    margin:20px;
 }
+
+.announc_element{
+    padding: 20px 10px;
+}
+
+.announc_element > div {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.announc_element > div + span {
+    font-size: 0.9rem;
+}
+
+.announc_element:nth-child(2){
+    border-top: 1px solid var(--color-grey);
+    border-bottom: 1px solid var(--color-grey);
+}
+
+/* Trending */
 
 .trend_container .account{
     display:grid;
